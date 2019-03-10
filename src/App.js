@@ -163,7 +163,7 @@ const api_dhour = await fetch(`https://cors-anywhere.herokuapp.com/https://weath
 //  mode : "no-cors"
 });
 const out2 = await api_dhour.json();
-const api_daily = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.cit.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&name=${city}&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_daily = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&name=${city}&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
