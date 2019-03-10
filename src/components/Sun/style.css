@@ -1,0 +1,28 @@
+.SunRise {grid-area: Rise; text-align: center}
+.SunSet {grid-area: Set; text-align: center}
+
+.Sun{
+    display: grid;
+    grid-template-areas:
+         'Rise Set';
+    padding: 10px;
+  }
+
+  .SunRiseImg{
+     height: 20vw;
+     width: 20vw;
+     -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
+     filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+   }
+   
+   .SunSetImg{
+    height: 20vw;
+    width: 20vw;
+    -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
+    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+   }
+
+h3{
+    font-size: 4vw;
+ 
+}

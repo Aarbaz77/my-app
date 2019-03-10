@@ -1,0 +1,25 @@
+.Pressure{grid-area: pressure; text-align: center;}
+.Humidity {grid-area: humid; text-align: center;}
+
+.LowInfo{
+  display: grid;
+  grid-template-areas:
+    'pressure humid uv';
+  padding: 2%;
+  grid-template-columns: 1fr 1fr;
+}
+
+.Img{
+  height: 15vw;
+  width: 15vw;
+  -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+  filter:         drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5)); 
+}
+
+h4{
+  font-size: 3vw;
+}
+
+p{
+  font-size: 4vw;
+}

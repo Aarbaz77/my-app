@@ -1,0 +1,30 @@
+.DayOne {grid-area: One; text-align: center} 
+.DayTwo {grid-area: Two; text-align: center}
+.DayThree {grid-area: Three; text-align: center}
+.DayFour {grid-area: Four; text-align: center}
+.DayFive {grid-area: Five; text-align: center}
+
+.LaterDays{
+    display: grid;
+    grid-template-areas:
+         'One Two Three Four Five';
+    padding: 2%;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    /*display: flex;*/
+    font-size: 3vw;
+  }
+
+.WarningImg1{
+  height: 15vw;
+  width: 15vw;
+  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
+  filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+  }
+  
+.WeatherImg1{
+  height: 20vw;
+  width: 20vw;
+  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
+  filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+}
+   

@@ -1,0 +1,20 @@
+.LocationImg{
+  height: 10vw;
+  width: 10vw;
+  -webkit-filter: drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3));
+  filter:         drop-shadow(2px 2px 1px rgba(0, 0, 0, 0.3)); 
+  }
+
+h2{
+  font-size: 6vw;
+}
+
+p{
+  font-size: 3.5vw;
+}
+[name~=lat], [name~=long]{
+  display: none;
+}
+#clickButton{
+  display: none;
+}

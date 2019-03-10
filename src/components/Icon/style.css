@@ -1,0 +1,6 @@
+.IconImg{
+    height: 45vw;
+    width: 45vw;
+    -webkit-filter: drop-shadow(4px 4px 1px rgba(0, 0, 2, 0.4));
+    filter:         drop-shadow(4px 4px 1px rgba(0, 0, 2, 0.4)); 
+  }

@@ -1,0 +1,27 @@
+.Visibility {grid-area: Vis; text-align: center;fill: white;}
+.WindSpeed {grid-area: WSpeed; text-align: center;fill: white;}
+.Precipitation {grid-area: Precip; text-align: center;fill: white;}
+.ChanceOfRain {grid-area: Rain; text-align: center;fill: white;}  
+/*
+.Visibility.Img {grid-area: visimg; text-align: center}
+.WindSpeed.Img {grid-area: windimg; text-align: center}
+.Precipitation.Img {grid-area: preimg; text-align: center}
+.ChanceOfRain.Img {grid-area: rainimg; text-align: center}
+*/
+
+.HighInfo{
+    display: grid;
+    grid-template-areas:
+         'Vis WSpeed'
+         'Precip Rain';
+    padding: 2%;
+    grid-template-columns: 50% 50%;
+  }
+
+.Img{
+     height: 50vw;
+     width: 70vw;
+     -webkit-filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5));
+     filter:         drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.5)); 
+     fill: white;
+  }

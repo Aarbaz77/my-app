@@ -1,0 +1,107 @@
+.SlideTime {grid-area: stime; font-size: 2vw;} 
+.SlideTemp {grid-area: stemp; font-size: 2vw;} 
+.SlideConditions {grid-area: scond; font-size: 1.6vw;} 
+.Slide {grid-area: slide;} 
+
+.hours1 {grid-area: h1;}
+.hours2 {grid-area: h2;}
+.hours3 {grid-area: h3;}
+.hours4 {grid-area: h4;}
+.hours5 {grid-area: h5;}
+.hours6 {grid-area: h6;}
+.hours7 {grid-area: h7;}
+.hours8 {grid-area: h8;}
+.hours9 {grid-area: h9;}
+.hours10 {grid-area: h10;}
+.hours11 {grid-area: h11;}
+.hours12 {grid-area: h12;}
+.hours13 {grid-area: h13;}
+.hours14 {grid-area: h14;}
+.hours15 {grid-area: h15;}
+.hours16 {grid-area: h16;}
+.hours17 {grid-area: h17;}
+.hours18 {grid-area: h18;}
+.hours19 {grid-area: h19;}
+.hours20 {grid-area: h20;}
+.hours21 {grid-area: h21;}
+.hours22 {grid-area: h22;}
+.hours23 {grid-area: h23;}
+.hours24 {grid-area: h24;}
+
+
+  .Slider{
+    display: grid;
+    grid-template-areas:
+      'h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11 h12 h13 h14 h15 h16 h17 h18 h19 h20 h21 h22 h23 h24';
+    padding: 2%;
+    grid-template-columns: repeat(24,10vw);
+    height: 14vw;
+    width: 98%;
+    overflow: scroll;
+    grid-gap: 2vw;
+  }
+
+  .EachHour{
+    display: grid;
+    grid-template-areas:
+      'stime'
+      'stemp' 
+      'scond';
+    padding: 2%;
+    grid-template-rows: 3vw 3vw 6vw;
+    width: 10vw;
+    text-align: center;
+    height: 14vw;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: rgba(184, 184, 184, 0.5); 
+    border-radius: 25px;
+  }
+  
+  .WeatherImgSL{
+    height: 6vw;
+    width: 6vw;
+    padding: 1.6vw;
+    -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
+    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+  }
+    
+  .slidecontainer {
+    width: 100%;
+  }
+  
+  .Slide {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
+    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+  }
+  
+  .Slide:hover {
+    opacity: 1;
+  }
+  
+  .Slide::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 5%;
+    height: 25px;
+    background: rgb(10, 206, 255);
+    cursor: pointer;
+  }
+  
+  .Slide::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #4CAF50;
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 10vw;
+  }
