@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://aarbaz77.github.io/my-app",
+  "homepage": "https://aarbaz77.github.io/my-app/",
   "dependencies": {
     "google-map-react": "^1.1.2",
     "google-maps-react": "^2.0.2",
