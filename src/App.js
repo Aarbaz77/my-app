@@ -179,7 +179,6 @@ const api_sun = await fetch(`https://cors-anywhere.herokuapp.com/https://weather
 const out4 = await api_sun.json();
 console.log(out);
 console.log(out2);
-console.log(out3);
 console.log(out4);
     if (city && country){
 
