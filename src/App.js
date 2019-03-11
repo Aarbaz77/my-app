@@ -142,35 +142,30 @@ const api_call_2 = await fetch(`https://maps.googleapis.com/maps/api/geocode/jso
   method : "POST",
 }); 
    const data2 = await api_call_2.json();
-   let spldata = (data2.plus_code.compound_code);
-   let splarray = spldata.split(" ");
-   const country = splarray[splarray.length-1];
-   let ctrim = splarray[splarray.length-2];
-   const city = ctrim.substring(0, ctrim.length - 1);
    
     //calling weather api
-const api_2 = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A&product=observation&name=${city}
+const api_2 = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=observation&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out = await api_2.json();
-const api_dhour = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A&product=forecast_hourly&name=${city}
+const api_dhour = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_hourly&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out2 = await api_dhour.json();
-const api_daily = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&name=${city}&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_daily = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out3 = await api_daily.json();
-const api_sun = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A&product=forecast_astronomy&name=${city}
+const api_sun = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_astronomy&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
@@ -179,14 +174,15 @@ const api_sun = await fetch(`https://cors-anywhere.herokuapp.com/https://weather
 const out4 = await api_sun.json();
 console.log(out);
 console.log(out2);
+console.log(out3);
 console.log(out4);
-    if (city && country){
+    if (lati && long){
 
       console.log(data2);
       this.setState({
         temperature: Math.round(parseFloat(out.observations.location[0].observation[0].temperature)),
-        city: city,
-        country: country,
+        city: out.observations.location[0].city,
+        country: out.observations.location[0].country,
         humidity: out.observations.location[0].observation[0].humidity,
         icon: out.observations.location[0].observation[0].iconLink,
         description: out.observations.location[0].observation[0].iconName,
