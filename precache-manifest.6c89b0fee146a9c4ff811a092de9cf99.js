@@ -112,7 +112,7 @@ self.__precacheManifest = [
     "url": "/my-app/static/media/Background.cf0eb466.jpg"
   },
   {
-    "revision": "c3461f7cd3024456d33c4fd32834ad71",
+    "revision": "04306bbe0e477c348ce1706f41c7c06e",
     "url": "/my-app/index.html"
   }
 ];
