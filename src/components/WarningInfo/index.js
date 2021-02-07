@@ -52,13 +52,13 @@ class WarningInfo extends Component{
       else if(visibility<10){
         retf[1]="Yellow Warning";
         retf[0]=Yellow;
-        retf[2] = visib+"\n"+clothing+"\n1.Reflective Clothing\n"+acc+"\n1.Biker Lights";
+        retf[2] = visib+"\n"+clothing+"\n1.Reflective Clothing\n"+acc+"\n2.Biker Lights";
         return retf;
       }
       else if(windspeed>30){
         retf[1]="Yellow Warning";
         retf[0]=Yellow;
-        retf[2] = wspeed+"\n"+clothing+"\n1.Raincoat/WindCheater\n"+acc+"\n1.Mufflers";
+        retf[2] = wspeed+"\n"+clothing+"\n1.Raincoat/WindCheater\n"+acc+"\n2.Mufflers";
         return retf;
       }
       else if(cof>70){
@@ -90,16 +90,16 @@ class WarningInfo extends Component{
           </div>
           <button className="button" onClick={(e) => this.setState({ isOpen: true })}>More Info</button>
 
-            <Dialog
-            className='DialogInfo'
-            isOpen={this.state.isOpen} onClose={(e) => this.setState({ isOpen: false })}>
-            <div class='MapInfo'>
-            <MapContainer 
-            lati={latitude}
-            longi={longitude}/>
-            </div>
-            {message}
-            </Dialog>
+          <Dialog
+          className='DialogInfo'
+          isOpen={this.state.isOpen} onClose={(e) => this.setState({ isOpen: false })}>
+          <div class='MapInfo'>
+          <MapContainer
+          lati={latitude}
+          longi={longitude}/>
+          </div>
+          {message}
+          </Dialog>
         </div>
     )
 
