@@ -1,5 +1,5 @@
-.SlideTime {grid-area: stime; font-size: 2vw;} 
-.SlideTemp {grid-area: stemp; font-size: 2vw;} 
+.SlideTime {grid-area: stime; font-size: 4vw;} 
+.SlideTemp {grid-area: stemp; font-size: 4vw;} 
 .SlideConditions {grid-area: scond; font-size: 1.6vw;} 
 .Slide {grid-area: slide;} 
 
@@ -35,10 +35,11 @@
       'h1 h2 h3 h4 h5 h6 h7 h8 h9 h10 h11 h12 h13 h14 h15 h16 h17 h18 h19 h20 h21 h22 h23 h24';
     padding: 2%;
     grid-template-columns: repeat(24,10vw);
-    height: 14vw;
-    width: 98%;
-    overflow: scroll;
-    grid-gap: 2vw;
+    height: 25vw;
+    width: 92vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-gap: 10vw;
   }
 
   .EachHour{
@@ -48,21 +49,18 @@
       'stemp' 
       'scond';
     padding: 2%;
-    grid-template-rows: 3vw 3vw 6vw;
-    width: 10vw;
+    grid-template-rows: 7vw 5vw 6vw;
+    width: 17vw;
     text-align: center;
-    height: 14vw;
-    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    height: 25vw;
     background: rgba(184, 184, 184, 0.5); 
     border-radius: 25px;
   }
   
   .WeatherImgSL{
-    height: 6vw;
-    width: 6vw;
-    padding: 1.6vw;
-    -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
-    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+    height: 9vw;
+    width: 9vw;
+    padding: 3.6vw;
   }
     
   .slidecontainer {
@@ -78,8 +76,6 @@
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-    -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
-    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
   }
   
   .Slide:hover {

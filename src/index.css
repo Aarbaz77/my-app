@@ -16,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("resources/Background.jpg");
   background-attachment: fixed;
-  background-position: center;
+  background-position: initial;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -29,10 +29,10 @@ code {
 .Temperature {grid-area: Temperature; text-align: center;}
 .Icon {grid-area: IconImg; text-align: center;}
 .Location {grid-area: Location; text-align: center;}
-.WarningInfo {padding-bottom: 15px; grid-area: WarningInfo; text-align: center; box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background: rgba(184, 184, 184, 0.5); border-radius: 25px;}
+.WarningInfo {padding-bottom: 15px; grid-area: WarningInfo; text-align: center; background: rgba(184, 184, 184, 0.5); border-radius: 25px;}
 .HighInfo {grid-area: HighInfo; text-align: center; box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 25px;}
 .Slider {grid-area: Slider; text-align: center;}
-.LaterDays {grid-area: LaterDays; text-align: center; box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); background: rgba(184, 184, 184, 0.5); border-radius: 25px;}
+.LaterDays {grid-area: LaterDays; text-align: center; background: rgba(184, 184, 184, 0.5); border-radius: 25px;}
 .Sun {grid-area: Sun; text-align: center;}
 .LowInfo {grid-area: LowInfo; text-align: center;}
 
@@ -46,21 +46,18 @@ code {
       'Slider Slider'
       'LaterDays LaterDays'
       'Sun Sun'
-      'LowInfo LowInfo'; 
+      'LowInfo LowInfo';
     grid-gap: 0 1.5%;
     grid-auto-columns: 100%;
     padding: 2%;
     grid-template-columns: 50% 50%;
   }
 
-  
+
 
 *:not(button){
   color: rgb(250, 250, 250);
-  text-shadow: 1.5px 1.5px 2px #000000;
   font-size: 100%;
   font-size-adjust: inherit;
   font-family: 'Magra', sans-serif;
 }
-
-

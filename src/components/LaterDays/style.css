@@ -17,14 +17,10 @@
 .WarningImg1{
   height: 15vw;
   width: 15vw;
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
-  filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
   }
   
 .WeatherImg1{
   height: 20vw;
   width: 20vw;
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
-  filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
 }
    

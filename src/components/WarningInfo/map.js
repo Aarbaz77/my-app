@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './style.css'
 import {Map, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 export class MapContainer extends Component {
@@ -9,11 +10,11 @@ export class MapContainer extends Component {
       }
   render() {
     const style = {
-      height: '40vh',
-      width: '95vw',
-      position: 'relative',
-      display: 'inline-block'
-    }
+        height: '40vh',
+        width: '95vw',
+        position: 'relative',
+        display: 'inline-block'
+      }
       let lati = this.props.lati;
       let longi = this.props.longi;
 
