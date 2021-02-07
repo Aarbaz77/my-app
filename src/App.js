@@ -45,11 +45,11 @@ class App extends React.Component {
     des3: undefined,
     des4: undefined,
     des5: undefined,
-    cof1: undefined,                                                                                                                                                                   
-    cof2: undefined,                                                                                                                                                                   
-    cof3: undefined,                                                                                                                                                                   
-    cof4: undefined,                                                                                                                                                                   
-    cof5: undefined, 
+    cof1: undefined,
+    cof2: undefined,
+    cof3: undefined,
+    cof4: undefined,
+    cof5: undefined,
     wind1: undefined,
 wind2: undefined,
 wind3: undefined,
@@ -130,42 +130,42 @@ wind5: undefined,
     error: undefined
   }
 
-  
+
 
   getWeather = async (e) => {
     e.preventDefault();
-    
+
     const lati = e.target.elements.lat.value;
     const long = e.target.elements.long.value;
     //calling google geolocation api
 const api_call_2 = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lati},${long}&key=AIzaSyCO9wvfXjzjXMpzcevukwiunZkuySsCZzU`, {
   method : "POST",
-}); 
+});
    const data2 = await api_call_2.json();
-   
+
     //calling weather api
-const api_2 = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=observation&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_2 = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=observation&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out = await api_2.json();
-const api_dhour = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_hourly&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_dhour = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=forecast_hourly&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out2 = await api_dhour.json();
-const api_daily = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_daily = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out3 = await api_daily.json();
-const api_sun = await fetch(`https://cors-anywhere.herokuapp.com/https://weather.api.here.com/weather/1.0/report.json?product=forecast_astronomy&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_sun = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=forecast_astronomy&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
 `,{
  method : "GET",
 //  credentials:"same-origin",
@@ -320,11 +320,11 @@ console.log(out4);
     }
   }
   }
-  
+
 
 
   render() {
-    
+
     return (<div className="grid-container">
         <Temperature
         className = "Temperature"
@@ -332,7 +332,7 @@ console.log(out4);
         hightemp={this.state.hightemp}
         lowtemp={this.state.lowtemp}
         description={this.state.description}/>
-        <Icon 
+        <Icon
         className="Icon"
         description={this.state.description}
         icon={this.state.icon}/>
@@ -341,7 +341,7 @@ console.log(out4);
           getLocation={this.getWeather}
           cityname={this.state.city}
           countryname={this.state.country}/>
-        <WarningInfo 
+        <WarningInfo
         className = "WarningInfo"
         lati={this.state.latit}
         longi={this.state.longit}
@@ -350,7 +350,7 @@ console.log(out4);
         visibility={this.state.visibility}
         cof={this.state.precipitation}
         />
-        <HighInfo 
+        <HighInfo
           className = "HighInfo"
           windspeed={this.state.windspeed}
           winddir={this.state.winddir}
@@ -432,7 +432,7 @@ console.log(out4);
         time23= {this.state.time23}
         time24= {this.state.time24}
         />
-        <LaterDays 
+        <LaterDays
         className="LaterDays"
         temp1={this.state.temp1}
         temp2={this.state.temp2}
@@ -459,8 +459,8 @@ console.log(out4);
         cof3 = {this.state.cof3}
         cof4 = {this.state.cof4}
         cof5 = {this.state.cof5}/>
-        
-        <Sun 
+
+        <Sun
         className = "Sun"
         description={this.state.description}
         sunrise={this.state.sunrise}

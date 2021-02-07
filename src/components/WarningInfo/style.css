@@ -2,7 +2,7 @@
     height: 20vw;
     width: 20vw;
     -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
-    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3)); 
+    filter:         drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.3));
   }
 
 
@@ -46,7 +46,13 @@ box-shadow: 0.3vw 0.4vw #999;
 
 .button:hover {background-color: #3e8e41}
 
-.MapContainer{
-  width: 50vh;
+.DialogInfo{
+  max-width: 70%;
+  align-items: center;
+}
+
+.MapInfo {
   height: 50vh;
+  align-items: center;
+  display: inline-block;
 }
