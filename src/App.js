@@ -9,6 +9,8 @@ import LaterDays from './components/LaterDays';
 import Sun from './components/Sun';
 import LowInfo from './components/LowInfo';
 
+const HERE_API_KEY = "LuqEFhUeb0eJS4AIFog7n9ABfxiGQ1OpoXokklkmq0U";
+
 class App extends React.Component {
   //Giving the state default value
   state = {
@@ -144,29 +146,26 @@ const api_call_2 = await fetch(`https://maps.googleapis.com/maps/api/geocode/jso
    const data2 = await api_call_2.json();
 
     //calling weather api
-const api_2 = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=observation&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
+const api_2 = await fetch(`https://weather.cc.api.here.com/weather/1.0/report.json?product=observation&latitude=${lati}&longitude=${long}&oneobservation=true&apiKey=${HERE_API_KEY}
 `,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out = await api_2.json();
-const api_dhour = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=forecast_hourly&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
-`,{
+const api_dhour = await fetch(`https://weather.cc.api.here.com/weather/1.0/report.json?product=forecast_hourly&latitude=${lati}&longitude=${long}&oneobservation=true&apiKey=${HERE_API_KEY}`,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out2 = await api_dhour.json();
-const api_daily = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
-`,{
+const api_daily = await fetch(`https://weather.cc.api.here.com/weather/1.0/report.json?product=forecast_7days_simple&latitude=${lati}&longitude=${long}&oneobservation=true&apiKey=${HERE_API_KEY}`,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
 });
 const out3 = await api_daily.json();
-const api_sun = await fetch(`https://weather.api.here.com/weather/1.0/report.json?product=forecast_astronomy&latitude=${lati}&longitude=${long}&oneobservation=true&app_id=V0Dj4Lxq58PC6rB3kMGN&app_code=dFsl8rq5JQeQt6cgAyB18A
-`,{
+const api_sun = await fetch(`https://weather.cc.api.here.com/weather/1.0/report.json?product=forecast_astronomy&latitude=${lati}&longitude=${long}&oneobservation=true&apiKey=${HERE_API_KEY}`,{
  method : "GET",
 //  credentials:"same-origin",
 //  mode : "no-cors"
