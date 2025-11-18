@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "ce8aedea5a8c74935594",
-    "url": "/my-app/static/css/main.8c094c54.chunk.css"
+    "revision": "4b8bb8302622454487bc",
+    "url": "/my-app/static/css/main.cb6bb754.chunk.css"
   },
   {
-    "revision": "ce8aedea5a8c74935594",
-    "url": "/my-app/static/js/main.ce8aedea.chunk.js"
+    "revision": "4b8bb8302622454487bc",
+    "url": "/my-app/static/js/main.4b8bb830.chunk.js"
   },
   {
     "revision": "caff8f4450a1e5b1c09b",
@@ -68,8 +68,8 @@ self.__precacheManifest = [
     "url": "/my-app/static/media/Night.04ca4892.jpg"
   },
   {
-    "revision": "a4afa29ccaa3a78ca289c2ba391aa25f",
-    "url": "/my-app/static/media/location.a4afa29c.svg"
+    "revision": "a2b55534805042222ec062e2dd688740",
+    "url": "/my-app/static/media/location.a2b55534.svg"
   },
   {
     "revision": "49ed916b16636e29e43b9de0eb7ce9d7",
@@ -100,19 +100,19 @@ self.__precacheManifest = [
     "url": "/my-app/static/media/Cloud_Night.97ab3d7a.jpg"
   },
   {
-    "revision": "ce811ea6f0d53af6c3dd5f48f8cea2bd",
-    "url": "/my-app/static/media/pressure.ce811ea6.svg"
+    "revision": "7141b0a5fe97ae545f43aaca3688b8f7",
+    "url": "/my-app/static/media/pressure.7141b0a5.svg"
   },
   {
-    "revision": "aac74e0d72cc8f3c42ac4aed8c37a6d9",
-    "url": "/my-app/static/media/humidity (1).aac74e0d.svg"
+    "revision": "ed2c6bf96ab267dd84e99740420a3202",
+    "url": "/my-app/static/media/humidity (1).ed2c6bf9.svg"
   },
   {
     "revision": "cf0eb46660ae656ae8c51f7e59f03bb1",
     "url": "/my-app/static/media/Background.cf0eb466.jpg"
   },
   {
-    "revision": "9a36f7e7477990adfc2e73ee5969540c",
+    "revision": "2366d662fa0da1276c98574a102fe7c8",
     "url": "/my-app/index.html"
   }
 ];
