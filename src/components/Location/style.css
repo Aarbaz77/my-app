@@ -1,7 +1,7 @@
 .LocationImg{
   height: 10vw;
   width: 10vw;
-  }
+}
 
 h2{
   font-size: 6vw;
@@ -15,4 +15,109 @@ p{
 }
 #clickButton{
   display: none;
+}
+
+.SearchContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.SearchContainer h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.SearchForm {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  max-width: 400px;
+  align-items: center;
+}
+
+.AutocompleteWrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.SearchInput {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  color: black;
+}
+
+.SuggestionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 8px 8px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: black;
+}
+
+.SuggestionsList li {
+  padding: 10px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  font-size: 16px;
+  text-align: left;
+  color: black;
+}
+
+.SuggestionsList li:last-child {
+  border-bottom: none;
+}
+
+.SuggestionsList li:hover {
+  background: #f0f0f0;
+}
+
+.SearchButton {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+.SearchButton:hover {
+  background-color: #0056b3;
+}
+
+.CurrentLocationButton {
+  margin-top: 10px;
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: 1px solid #007bff;
+  background-color: transparent;
+  color: #007bff;
+  cursor: pointer;
+  width: 100%;
+}
+
+.CurrentLocationButton:hover {
+  background-color: #f0f8ff;
 }
