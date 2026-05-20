@@ -61,12 +61,12 @@ class Sun extends Component{
   let calli = bgcall();
     return (
       <div className="Sun">
-        <div className="SunRise">
+        <div className="SunRise glass-panel" style={{borderRadius: '25px', margin: '5px', padding: '10px'}}>
           <h3>Sunrise</h3>
           <img className="SunRiseImg" src={Sunriseimg} alt="SunRise"></img> 
           <p>{this.props.sunrise}</p>
         </div>
-        <div className="SunSet">
+        <div className="SunSet glass-panel" style={{borderRadius: '25px', margin: '5px', padding: '10px'}}>
           <h3>Sunset</h3>
           <img className="SunSetImg" src={Sunsetimg} alt="SunSet"></img>
           <p>{this.props.sunset}{calli}

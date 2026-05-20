@@ -4,7 +4,6 @@ import Dialog from '../Dialog';
 import Green from '../Images/Warning/Green_Warning.png';
 import Yellow from '../Images/Warning/Warning.png';
 import Red from '../Images/Warning/Red_Warning.png';
-import MapContainer from './map';
 
 class WarningInfo extends Component{
   //this class displays the weather warning colour and also contains some more information
@@ -82,7 +81,7 @@ class WarningInfo extends Component{
     let longitude = this.props.longi;
 
     return (
-      <div className="WarningInfo">
+      <div className={this.props.className || "WarningInfo"}>
           <h2>Warning Information</h2>
             <img className="WarningImg" src={sign} alt="img"></img>
           <h3 className="WarningType">{sname}</h3>
@@ -93,12 +92,20 @@ class WarningInfo extends Component{
           <Dialog
           className='DialogInfo'
           isOpen={this.state.isOpen} onClose={(e) => this.setState({ isOpen: false })}>
-          <div class='MapInfo'>
-          <MapContainer
-          lati={latitude}
-          longi={longitude}/>
+          <div className='MapInfo' style={{display: 'flex', justifyContent: 'center', width: '100%', marginBottom: '15px'}}>
+            <iframe 
+              title="Google Maps"
+              width="100%" 
+              height="100%" 
+              style={{border:0, borderRadius: '25px', minHeight: '300px'}} 
+              loading="lazy" 
+              allowFullScreen 
+              src={`https://maps.google.com/maps?q=${latitude},${longitude}&z=15&output=embed`}>
+            </iframe>
           </div>
-          {message}
+          <div style={{ whiteSpace: 'pre-wrap', lineHeight: '1.5', fontSize: '3vw', padding: '15px', background: 'rgba(255, 255, 255, 0.05)', borderRadius: '15px' }}>
+            {message}
+          </div>
           </Dialog>
         </div>
     )

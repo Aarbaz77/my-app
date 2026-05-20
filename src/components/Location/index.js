@@ -92,20 +92,33 @@ class Location extends Component{
 
   //this class is responsible for getting the location and displaying it
   render (){
-    let d = new Date();
-    let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-    let  months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    const zero_p = (val) =>{
-      let tm = val;
-      if(val<10){
-        tm = "0"+val;
-        return tm;
+    let f_date = "";
+    if (this.props.utcTime) {
+      let offsetMs = 0;
+      if (!this.props.utcTime.endsWith('Z')) {
+        const offsetStr = this.props.utcTime.slice(-6);
+        const sign = offsetStr[0] === '+' ? 1 : -1;
+        const hours = parseInt(offsetStr.substring(1, 3), 10);
+        const mins = parseInt(offsetStr.substring(4, 6), 10);
+        offsetMs = sign * (hours * 60 + mins) * 60 * 1000;
       }
-      else{
-        return tm;
+      
+      const targetDate = new Date(Date.now() + offsetMs);
+      
+      let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      
+      const zero_p = (val) => val < 10 ? "0" + val : val;
+      f_date = `${targetDate.getUTCDate()} ${months[targetDate.getUTCMonth()]} ${targetDate.getUTCFullYear()} ${days[targetDate.getUTCDay()]} ${zero_p(targetDate.getUTCHours())}:${zero_p(targetDate.getUTCMinutes())}`;
+    } else {
+      let d = new Date();
+      let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+      let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+      const zero_p = (val) =>{
+        return val < 10 ? "0" + val : val;
       }
+      f_date = d.getDate() + " " + months[d.getMonth()] +" "+ d.getFullYear() + " " + days[d.getDay()] + " " + zero_p(d.getHours()) + ":" + zero_p(d.getMinutes());
     }
-    let f_date = d.getDate() + " " + months[d.getMonth()] +" "+ d.getFullYear() + " " + days[d.getDay()] + " " + zero_p(d.getHours()) + ":" + zero_p(d.getMinutes());
     let name = this.props.cityname + ", " + this.props.countryname;
     return (
       <div className="Location">

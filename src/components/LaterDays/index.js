@@ -67,7 +67,7 @@ class LaterDays extends Component{
     const classNameMap = ["DayOne", "DayTwo", "DayThree", "DayFour", "DayFive"];
 
     return (
-      <div className="LaterDays">
+      <div className={this.props.className || "LaterDays"}>
         {dailyForecasts.map((f, i) => (
           <Days 
             key={i} 

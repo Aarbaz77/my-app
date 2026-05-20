@@ -9,7 +9,7 @@ class Slider extends Component{
     const forecasts = this.props.hourlyForecasts || [];
 
     return (
-      <div className="Slider">
+      <div className={this.props.className || "Slider"}>
         {forecasts.map((f, i) => (
           <Hours key={i} ClassName={`hours${i+1}`} time={f.time} temp={f.temp} conditions={f.desc}/>
         ))}

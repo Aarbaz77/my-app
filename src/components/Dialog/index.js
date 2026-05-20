@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
 let dialogStyles = {
     width: '55.9vh',
     maxWidth: '100%',
@@ -8,9 +9,8 @@ let dialogStyles = {
     top: '50%',
     transform: 'translate(-50%,-50%)',
     zIndex: '999',
-    backgroundColor: '#202060',
     padding: '10px 20px 40px',
-    borderRadius: '8px',
+    borderRadius: '25px',
     display: 'flex',
     flexDirection: 'column'
 };
@@ -31,7 +31,7 @@ let dialogCloseButtonStyles = {
 class Dialog extends Component {
     render() {
         let dialog = (
-            <div style={dialogStyles}>
+            <div style={dialogStyles} className="glass-panel">
                 <button style={dialogCloseButtonStyles} onClick={this.props.onClose}>X</button>
 
                 <div>{this.props.children}</div>
@@ -41,10 +41,11 @@ class Dialog extends Component {
         if (! this.props.isOpen) {
             dialog = null;
         }
-        return (
+        return ReactDOM.createPortal(
             <div>
                 {dialog}
-            </div>
+            </div>,
+            document.body
         );
     }
 }

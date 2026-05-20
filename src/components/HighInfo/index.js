@@ -14,7 +14,7 @@ class HighInfo extends Component{
     let precipitationdes = this.props.precipitation + "%";
     let cofdes = this.props.cof + "%";
     return (
-      <div className="HighInfo">
+      <div className={this.props.className || "HighInfo"}>
         <Information class="Visibility" name="Visibility" percent={this.props.visibility && visibilitydes} img={visibility}/>
         <Information class="WindSpeed" name="Wind Speed" percent={this.props.windspeed && windinfo} img={wind}/>
         <Information class="Precipitation" name="Precipitation" percent={this.props.precipitation && precipitationdes} img={Precipitation}/>

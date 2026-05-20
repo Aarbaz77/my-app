@@ -34,6 +34,7 @@ class App extends React.Component {
     cof: undefined,
     hourlyForecasts: [],
     dailyForecasts: [],
+    utcTime: undefined,
     error: undefined
   }
 
@@ -99,6 +100,7 @@ class App extends React.Component {
           cof: cofVal,
           hourlyForecasts: hourly,
           dailyForecasts: daily,
+          utcTime: out.observations.location[0].observation[0].utcTime,
           error: ""
         });
 
@@ -140,8 +142,10 @@ class App extends React.Component {
   }
 
   render() {
+    const themeClass = this.state.daylight === "D" ? "theme-light" : "theme-dark";
+    document.body.className = themeClass;
     return (
-      <div className="grid-container">
+      <div className={`grid-container ${themeClass}`}>
         <Temperature
           className="Temperature"
           temperature={this.state.temperature}
@@ -157,9 +161,10 @@ class App extends React.Component {
           getLocation={this.getWeather}
           getWeatherByCity={this.getWeatherByCity}
           cityname={this.state.city}
-          countryname={this.state.country} />
+          countryname={this.state.country}
+          utcTime={this.state.utcTime} />
         <WarningInfo
-          className="WarningInfo"
+          className="WarningInfo glass-panel"
           lati={this.state.latit}
           longi={this.state.longit}
           city={this.state.city}
@@ -167,7 +172,7 @@ class App extends React.Component {
           visibility={this.state.visibility}
           cof={this.state.precipitation} />
         <HighInfo
-          className="HighInfo"
+          className="HighInfo glass-panel"
           windspeed={this.state.windspeed}
           winddir={this.state.winddir}
           visibility={this.state.visibility}
@@ -177,7 +182,7 @@ class App extends React.Component {
           className="Slider"
           hourlyForecasts={this.state.hourlyForecasts} />
         <LaterDays
-          className="LaterDays"
+          className="LaterDays glass-panel"
           dailyForecasts={this.state.dailyForecasts} />
         <Sun
           className="Sun"

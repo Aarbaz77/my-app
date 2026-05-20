@@ -29,12 +29,12 @@ code {
 .Temperature {grid-area: Temperature; text-align: center;}
 .Icon {grid-area: IconImg; text-align: center;}
 .Location {grid-area: Location; text-align: center;}
-.WarningInfo {padding-bottom: 15px; grid-area: WarningInfo; text-align: center; background: rgba(184, 184, 184, 0.5); border-radius: 25px;}
-.HighInfo {grid-area: HighInfo; text-align: center; box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); border-radius: 25px;}
-.Slider {grid-area: Slider; text-align: center;}
-.LaterDays {grid-area: LaterDays; text-align: center; background: rgba(184, 184, 184, 0.5); border-radius: 25px;}
-.Sun {grid-area: Sun; text-align: center;}
-.LowInfo {grid-area: LowInfo; text-align: center;}
+.WarningInfo {padding-bottom: 15px; grid-area: WarningInfo; text-align: center; border-radius: 25px;}
+.HighInfo {grid-area: HighInfo; text-align: center; border-radius: 25px;}
+.Slider {grid-area: Slider; text-align: center; border-radius: 25px;}
+.LaterDays {grid-area: LaterDays; text-align: center; border-radius: 25px;}
+.Sun {grid-area: Sun; text-align: center; border-radius: 25px;}
+.LowInfo {grid-area: LowInfo; text-align: center; border-radius: 25px;}
 
 
 .grid-container {
@@ -47,10 +47,11 @@ code {
       'LaterDays LaterDays'
       'Sun Sun'
       'LowInfo LowInfo';
-    grid-gap: 0 1.5%;
-    grid-auto-columns: 100%;
+    grid-gap: 1.5%;
     padding: 2%;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 1fr 1fr;
+    box-sizing: border-box;
+    width: 100%;
   }
 
 
@@ -60,4 +61,21 @@ code {
   font-size: 100%;
   font-size-adjust: inherit;
   font-family: 'Magra', sans-serif;
+}
+
+/* Glassmorphism Styles */
+.theme-light .glass-panel {
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
+}
+
+.theme-dark .glass-panel {
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }

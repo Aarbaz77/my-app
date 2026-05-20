@@ -53,7 +53,7 @@ class Hours extends Component{
 
       let time = this.props.time+":00";
       return (
-          <div className="EachHour">
+          <div className="EachHour glass-panel">
               <p className="SlideTime">{this.props.time && time}</p>
               <p className="SlideTemp">{this.props.temp&&temp}</p>
               <img className="WeatherImgSL" id="new" src={description} alt="img"></img>
