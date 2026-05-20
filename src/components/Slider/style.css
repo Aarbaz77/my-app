@@ -40,6 +40,12 @@
     overflow-x: scroll;
     overflow-y: hidden;
     grid-gap: 10vw;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+
+  .Slider::-webkit-scrollbar {
+    display: none;
   }
 
   .EachHour{
